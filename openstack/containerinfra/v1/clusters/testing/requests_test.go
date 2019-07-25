@@ -197,5 +197,5 @@ func TestResizeCluster(t *testing.T) {
 	actual, err := res.Extract()
 	th.AssertNoErr(t, err)
 
-	th.AssertEquals(t, nodeCount, actual.NodeCount)
+	th.AssertDeepEquals(t, clusterUUID, actual)
 }
